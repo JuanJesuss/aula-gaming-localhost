@@ -1,6 +1,4 @@
 <?php
-    $anio= date('Y');
-    require_once("../views/iniciar-sesion.php");
     if(isset($_POST['iniciar-sesion'])){
         require_once("../models/funciones-iniciar-sesion.php");
         $db= conexion();
@@ -14,4 +12,6 @@
         $_SESSION['turno'] = $row['turno'];
         header("location: controller-bienvenido.php");                
     }
+    $anio= date('Y');
+    require_once("../views/iniciar-sesion.php");
 ?>
